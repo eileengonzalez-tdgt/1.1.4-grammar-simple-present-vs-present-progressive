@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>10 Week English Program | 1.1.4 Simple Present vs. Present Progressive</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f1faed',
+                            100: '#d9f0cf',
+                            200: '#b9e2a7',
+                            300: '#8bc975',
+                            400: '#55aa34',
+                            500: '#389d13',
+                            600: '#248700',
+                            700: '#1c6800',
+                            800: '#155000',
+                            900: '#2a2c2e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Custom Styles for Flipcards & Print formatting -->
+<style>
+        /* Helvetica is loaded from the user device or an appropriately licensed webfont. */
+        
+        body {
+            font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #2a2c2e;
+        }
+
+        /* Perspective for 3D flip card effect */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+            .step-section {
+                display: block !important;
+                page-break-after: always;
+            }
+            .shadow-lg, .shadow-md, .shadow-sm {
+                box-shadow: none !important;
+                border: 1px solid #cbd5e1;
+            }
+        }
+
+        .step-section {
+            display: none;
+        }
+
+        .step-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        :root { --subject: #248700; --subject-light: #d9f0cf; --ink: #2a2c2e; }
+        /* Master header: deep purple with light-purple controls */
+        .master-header { background:#4b286d !important; color:#ffffff !important; }
+        .master-header h1 { color:#ffffff !important; }
+        .master-header .brand-badge { background:#dbd0e2 !important; color:#4b286d !important; }
+        .master-header .header-meta { color:#e0cdf4 !important; }
+        .master-tabs { background:#dbd0e2 !important; border-color:#ad96bd !important; }
+        .master-tabs .nav-tab:not(.bg-brand-600) { color:#2a2c2e !important; }
+        .master-tabs .nav-tab:not(.bg-brand-600):hover { background:#c8b9d3 !important; color:#2a2c2e !important; }
+        .master-tabs .nav-tab.bg-brand-600 { background:#4b286d !important; color:#fff !important; }
+        .master-header button.bg-brand-600 { background:#dbd0e2 !important; color:#4b286d !important; }
+        .master-header button.bg-brand-600:hover { background:#c8b9d3 !important; }
+        .key-accuracy-rule { background:#f9f1ff !important; border-left-color:#8968a0 !important; color:#4b286d !important; }
+
+        html { font-size: 16px; }
+        body, button, input, textarea, select { font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        button { font-size: 15px; font-weight: 600; }
+        main h2 { font-size: 28px; line-height: 1.25; font-weight: 700; }
+        main h3 { font-size: 22px; line-height: 1.3; font-weight: 600; }
+        main p { line-height: 1.6; }
+        main .text-xs { font-size: 14px; }
+        main .text-sm { font-size: 16px; }
+        main .text-base { font-size: 16px; }
+        main .text-lg { font-size: 18px; }
+        main input, main textarea, main select { background: #fff; color: #2a2c2e; font-size: 16px; }
+        main input:focus, main textarea:focus, main select:focus { outline: 2px solid var(--subject); outline-offset: 2px; }
+        .nav-tab { font-size: 14px; }
+        .nav-tab:focus-visible, button:focus-visible { outline: 3px solid #ad96bd; outline-offset: 2px; }
+        .master-bottom-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:1152px; margin:0 auto 20px; padding:12px 20px; }
+        .master-bottom-nav button { background:var(--subject); color:white; padding:11px 20px; border-radius:9px; }
+        .master-bottom-nav button:disabled { background:#d9d9d9; color:#54595f; cursor:not-allowed; }
+        #section-progress-label { color:#e2e2e2; font-size:12px; margin-left:12px; white-space:nowrap; }
+        @media (max-width: 768px) { main h2 {font-size:25px;} main h3 {font-size:20px;} .master-bottom-nav {padding:12px;} }
+        @media print { .master-bottom-nav {display:none!important;} .step-section {break-after:auto;page-break-after:auto;} }
+    
+.master-header {background:#248700!important}
+.master-header .brand-badge {background:#d9f0cf!important;color:#1c6800!important}
+.master-header button.bg-brand-600 {background:#d9f0cf!important;color:#1c6800!important}
+.master-header button.bg-brand-600:hover {background:#b9e2a7!important}
+.master-tabs {background:#d9f0cf!important;border-color:#8bc975!important}
+.master-tabs .nav-tab.bg-brand-600 {background:#248700!important;color:#fff!important}
+.master-tabs .nav-tab:not(.bg-brand-600):hover {background:#b9e2a7!important;color:#2a2c2e!important}
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- TOP HEADER & NAVIGATION -->
+<header class="master-header bg-[#4b286d] text-white sticky top-0 z-50 shadow-md no-print">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Branding -->
+<div class="flex items-center space-x-3">
+<div class="brand-badge bg-[#d9f0cf] text-[#248700] font-bold p-2 rounded-lg text-sm tracking-wide">
+                        10W
+                    </div>
+<div>
+<h1 class="font-bold text-lg leading-tight">Lesson 1.1.4: Simple Present vs. Present Progressive</h1>
+<p class="header-meta text-xs font-medium text-[#e2f7da]">10 Week English Program · Day 1 · Grammar · CEFR A2–B1 · 60 min</p>
+</div>
+</div>
+<!-- Print & Export Action -->
+<button class="flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white text-xs sm:text-sm font-semibold py-2 px-3 sm:px-4 rounded-lg transition-colors" onclick="window.print()">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="hidden sm:inline">Print / Save PDF</span>
+</button>
+</div>
+</div>
+<!-- Progress Bar -->
+<div aria-label="Lesson section progress" aria-valuemax="7" aria-valuemin="0" aria-valuenow="1" class="w-full bg-[#8bc975] h-1.5" id="progress-track" role="progressbar">
+<div class="bg-brand-500 h-full transition-all duration-300" id="progress-bar" style="width:14.2857%"></div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="master-tabs bg-[#d9f0cf] border-t border-[#8bc975] overflow-x-auto">
+<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex space-x-1 sm:space-x-2 py-2 text-xs sm:text-sm whitespace-nowrap">
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-white bg-brand-600" id="tab-0" onclick="switchStep(0)">Overview</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-1" onclick="switchStep(1)">1. Encounter (5m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-2" onclick="switchStep(2)">2. Clarify (15m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-3" onclick="switchStep(3)">3. Remember (10m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-4" onclick="switchStep(4)">4. Internalize (15m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-5" onclick="switchStep(5)">5. Fluent Use (15m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-6" onclick="switchStep(6)">Reflection</button>
+</div>
+</nav>
+</header>
+<!-- MAIN CONTAINER -->
+<main class="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+<!-- STEP 0: OVERVIEW & OBJECTIVES -->
+<section class="step-section active" id="step-0"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><div class="flex flex-wrap items-center justify-between gap-4 mb-6"><div><span class="inline-block bg-brand-100 text-brand-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wide">Lesson 1.1.4 Overview</span><h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Everyday Habits &amp; What’s Happening Now</h2></div><div class="text-right"><span class="text-sm text-slate-500 block">Total Duration</span><span class="text-xl font-bold text-slate-800">60 Minutes</span></div></div>
+<p class="text-slate-600 leading-relaxed mb-6">Move from A2 grammar accuracy to B1 communication. Compare what people usually do with what they are doing now or temporarily, and use both tenses naturally in personal and workplace conversations.</p>
+<div class="grid md:grid-cols-3 gap-4 mb-8">
+<div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">01. Recognize</div><p class="text-xs text-slate-600">Distinguish habits, facts, current actions, and temporary situations.</p></div>
+<div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">02. Form</div><p class="text-xs text-slate-600">Use affirmative, negative, and question forms accurately.</p></div>
+<div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">03. Communicate</div><p class="text-xs text-slate-600">Discuss routines, temporary changes, and professional development with follow-up questions.</p></div></div>
+<h3 class="font-bold text-slate-800 text-lg mb-3">Lesson Roadmap</h3>
+<div class="overflow-x-auto"><table class="w-full text-left text-xs sm:text-sm border-collapse"><thead><tr class="bg-slate-100 text-slate-700"><th class="p-3 rounded-l-lg">Stage</th><th class="p-3">Focus Area</th><th class="p-3">Time</th><th class="p-3 rounded-r-lg">Activity Output</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="p-3 font-semibold text-slate-800">Encounter</td><td class="p-3 text-slate-600">Notice habits vs. temporary situations</td><td class="p-3 text-slate-500">5 min</td><td class="p-3 text-slate-600">Contrast two real-life situations</td></tr><tr><td class="p-3 font-semibold text-slate-800">Clarify</td><td class="p-3 text-slate-600">Structures, usage, time expressions</td><td class="p-3 text-slate-500">15 min</td><td class="p-3 text-slate-600">Grammar discovery and correction</td></tr><tr><td class="p-3 font-semibold text-slate-800">Remember</td><td class="p-3 text-slate-600">Controlled grammar practice</td><td class="p-3 text-slate-500">10 min</td><td class="p-3 text-slate-600">10 checked questions with explanations</td></tr><tr><td class="p-3 font-semibold text-slate-800">Internalize</td><td class="p-3 text-slate-600">Partner interview</td><td class="p-3 text-slate-500">15 min</td><td class="p-3 text-slate-600">8 guided questions and follow-ups</td></tr><tr><td class="p-3 font-semibold text-slate-800">Fluent Use</td><td class="p-3 text-slate-600">Authentic role-play</td><td class="p-3 text-slate-500">15 min</td><td class="p-3 text-slate-600">Everyday or workplace conversation</td></tr></tbody></table></div><div class="mt-8 text-right"><button class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm transition-all" onclick="switchStep(1)">Start Lesson →</button></div></div></section>
+<!-- STEP 1: WARM-UP -->
+<section class="step-section" id="step-1"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><div class="mb-6"><span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Step 1 of 6</span><h2 class="text-2xl font-bold text-slate-900 mt-2">Encounter · Notice the Difference</h2><p class="text-slate-600 mt-2">Discuss the situations before studying the rules.</p></div>
+<div class="grid md:grid-cols-2 gap-4 mb-6">
+<div class="p-5 bg-slate-50 rounded-xl border border-slate-200"><span class="text-xs font-bold text-brand-700">SITUATION A · REGULAR</span><p class="text-lg font-semibold mt-3">“I usually work from home.”</p><p class="text-sm text-slate-600 mt-2">A normal part of my routine.</p></div>
+<div class="p-5 bg-slate-50 rounded-xl border border-slate-200"><span class="text-xs font-bold text-brand-700">SITUATION B · TEMPORARY</span><p class="text-lg font-semibold mt-3">“This week, I’m working at the office.”</p><p class="text-sm text-slate-600 mt-2">Something different for a limited period.</p></div></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">Discuss with a partner</h3><ol class="list-decimal pl-5 text-slate-700 space-y-2"><li>Which situation describes a regular routine?</li><li>Which one is temporary?</li><li>What changes in the verb forms?</li></ol></div><button class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold py-1.5 px-3 rounded-md" onclick="toggleAnswer('discovery')">Reveal explanation</button><div class="hidden mt-3 p-4 bg-brand-50 border border-brand-200 rounded-lg text-sm" id="discovery">Simple Present describes the regular routine. Present Progressive describes a temporary situation happening around now.</div><div class="mt-8 text-right"><button class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm transition-all" onclick="switchStep(2)">Next: Clarify →</button></div></div></section>
+<!-- STEP 2: VOCABULARY LAB -->
+<section class="step-section" id="step-2"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><div class="mb-6"><span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Step 2 of 6</span><h2 class="text-2xl font-bold text-slate-900 mt-2">Clarify · Understand the Grammar</h2><p class="text-slate-600 mt-2">Discover how meaning changes the tense, then compare sentence patterns.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">1 · Meaning and use</h3><div class="grid md:grid-cols-2 gap-4"><div><b>Simple Present</b><p>Habits, routines, and general facts.</p><p class="mt-2 italic">She speaks English. / I work five days a week.</p></div><div><b>Present Progressive</b><p>Actions happening now and temporary situations.</p><p class="mt-2 italic">She is speaking now. / I’m working extra hours this week.</p></div></div></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">2 · Sentence patterns</h3><div class="overflow-x-auto"><table class="w-full text-left text-sm"><thead><tr class="bg-slate-100"><th class="p-2">Form</th><th class="p-2">Simple Present</th><th class="p-2">Present Progressive</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="p-2">Affirmative</td><td class="p-2">She works every day.</td><td class="p-2">She is working now.</td></tr><tr><td class="p-2">Negative</td><td class="p-2">She doesn’t work on Sundays.</td><td class="p-2">She isn’t working today.</td></tr><tr><td class="p-2">Question</td><td class="p-2">Does she work from home?</td><td class="p-2">Is she working today?</td></tr></tbody></table></div><p class="mt-3 text-sm"><b>Remember:</b> He/she/it takes -s or -es in Simple Present affirmative sentences. After doesn’t, use the base verb. Present Progressive uses am/is/are + verb-ing.</p><p class="mt-2 text-sm">Spelling: make → making; run → running; study → studying.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">3 · Time expressions</h3><p><b>Simple Present:</b> usually, always, often, every day, on Mondays.</p><p class="mt-2"><b>Present Progressive:</b> right now, at the moment, currently, this week, these days.</p><p class="mt-2 text-sm">Time expressions are clues; context and meaning decide the tense.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">4 · Spot the mistake</h3><p>She work every day. · I am work right now. · Does she works here? · I working today. · I’m knowing the answer.</p><button class="mt-3 text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold py-1.5 px-3 rounded-md" onclick="toggleAnswer('mistakes')">Show corrections</button><div class="hidden mt-3 p-4 bg-brand-50 rounded-lg border border-brand-200" id="mistakes"><p>She <b>works</b> every day. · I <b>am working</b> right now. · Does she <b>work</b> here? · I <b>am working</b> today. · I <b>know</b> the answer.</p><p class="mt-2 text-sm">Know, like, want, and need are generally not used in progressive forms when describing states.</p></div></div><div class="mt-8 text-right"><button class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm transition-all" onclick="switchStep(3)">Next: Remember →</button></div></div></section>
+<!-- STEP 3: CONTROLLED PRACTICE -->
+<section class="step-section" id="step-3"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><div class="mb-6"><span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Step 3 of 6</span><h2 class="text-2xl font-bold text-slate-900 mt-2">Remember · Check Your Grammar</h2><p class="text-slate-600 mt-2">Choose the best answer for each situation. Check your work to see a score and explanations.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">1. She usually ___ at 8 a.m.</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-0" type="radio" value="0"/><span>start</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-0" type="radio" value="1"/><span>starts</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-0" type="radio" value="2"/><span>is starting</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-0"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">2. Look! The manager ___ to a customer.</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-1" type="radio" value="0"/><span>talks</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-1" type="radio" value="1"/><span>is talking</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-1" type="radio" value="2"/><span>talk</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-1"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">3. I ___ from home this week because my office is closed.</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-2" type="radio" value="0"/><span>work</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-2" type="radio" value="1"/><span>works</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-2" type="radio" value="2"/><span>am working</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-2"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">4. My brother ___ coffee.</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-3" type="radio" value="0"/><span>doesn't like</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-3" type="radio" value="1"/><span>isn't liking</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-3" type="radio" value="2"/><span>don't like</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-3"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">5. ___ you usually study in the evening?</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-4" type="radio" value="0"/><span>Are</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-4" type="radio" value="1"/><span>Do</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-4" type="radio" value="2"/><span>Does</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-4"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">6. Why ___ she working late today?</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-5" type="radio" value="0"/><span>does</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-5" type="radio" value="1"/><span>is</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-5" type="radio" value="2"/><span>do</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-5"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">7. Choose the correct sentence.</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-6" type="radio" value="0"/><span>He doesn't works on Sundays.</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-6" type="radio" value="1"/><span>He isn't work on Sundays.</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-6" type="radio" value="2"/><span>He doesn't work on Sundays.</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-6"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">8. Choose the correct sentence.</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-7" type="radio" value="0"/><span>I'm taking an English course these days.</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-7" type="radio" value="1"/><span>I taking an English course these days.</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-7" type="radio" value="2"/><span>I am take an English course these days.</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-7"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">9. Correct this regular habit: She is usually taking the bus to work.</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-8" type="radio" value="0"/><span>She usually takes the bus to work.</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-8" type="radio" value="1"/><span>She usually taking the bus to work.</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-8" type="radio" value="2"/><span>She does usually taking the bus.</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-8"></p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><p class="font-semibold mb-3">10. Which question asks about a temporary situation?</p><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-9" type="radio" value="0"/><span>Where do you usually work?</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-9" type="radio" value="1"/><span>Are you working at a different location this month?</span></label><label class="flex items-start gap-3 p-3 mb-2 bg-white rounded-lg border border-slate-200 cursor-pointer"><input class="mt-1" name="grammar-9" type="radio" value="2"/><span>Do you work every weekday?</span></label><p aria-live="polite" class="hidden text-sm mt-2" id="feedback-9"></p></div><div class="flex flex-wrap gap-3"><button class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl" onclick="checkGrammar()">Check Answers</button><button class="border border-slate-300 rounded-xl px-5 py-2.5 font-semibold" onclick="resetGrammar()">Reset</button></div><p aria-live="polite" class="mt-4 font-bold" id="grammar-score"></p><div class="mt-8 text-right"><button class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm transition-all" onclick="switchStep(4)">Next: Internalize →</button></div></div></section>
+<!-- STEP 4: DIALOGUE ANALYSIS -->
+<section class="step-section" id="step-4"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><div class="mb-6"><span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Step 4 of 6</span><h2 class="text-2xl font-bold text-slate-900 mt-2">Internalize · My Usual Life vs. My Life Right Now</h2><p class="text-slate-600 mt-2">Partner interview: answer in complete sentences, add details, and ask follow-up questions.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">Part A · Regular habits</h3><ol class="list-decimal pl-5 space-y-2"><li>What time do you usually wake up?</li><li>How do you normally spend your weekends?</li><li>How often do you practice English?</li><li>What do you usually do when you have free time?</li></ol></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">Part B · Current or temporary activities</h3><ol class="list-decimal pl-5 space-y-2" start="5"><li>What are you learning these days?</li><li>Are you working on any personal goals right now?</li><li>Are you doing anything differently this month?</li><li>What are you currently doing to improve your English?</li></ol></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">Speaking support</h3><p><b>Sentence starters:</b> I usually… · At the moment, I’m… · These days, I’m trying to… · Normally I…, but this week I’m…</p><p class="mt-2"><b>Follow-ups:</b> Why? · How often? · What about you? · How is that going?</p></div><p class="text-sm text-slate-600">Suggested timing: 2 minutes preparation, 10 minutes exchanging answers, 3 minutes sharing or feedback.</p><div class="mt-8 text-right"><button class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm transition-all" onclick="switchStep(5)">Next: Fluent Use →</button></div></div></section>
+<!-- STEP 5: SPEAKING SIMULATOR -->
+<section class="step-section" id="step-5"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><div class="mb-6"><span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Step 5 of 6</span><h2 class="text-2xl font-bold text-slate-900 mt-2">Fluent Use · Real-World Communication</h2><p class="text-slate-600 mt-2">Choose a scenario. Prepare keywords, not a full script, then switch roles.</p></div>
+<div class="flex flex-wrap gap-2 mb-5"><button class="bg-brand-600 text-white font-bold py-2 px-4 rounded-lg" id="scenario-a-btn" onclick="chooseScenario('a')">A · Catching Up</button><button class="bg-slate-100 text-slate-800 font-bold py-2 px-4 rounded-lg" id="scenario-b-btn" onclick="chooseScenario('b')">B · Job Interview</button></div>
+<div class="p-5 bg-slate-50 rounded-xl border border-slate-200" id="scenario-a"><h3 class="font-bold text-brand-700">Scenario A · Catching Up With a Friend</h3><p class="mt-2">You haven’t seen your friend for months. Talk about your usual routines and what’s different these days.</p><ul class="list-disc pl-5 mt-3 space-y-1"><li>What do you usually do during the week?</li><li>Are you studying or working on anything new?</li><li>Is anything changing in your routine these days?</li><li>How are you spending your free time lately?</li></ul></div>
+<div class="hidden p-5 bg-slate-50 rounded-xl border border-slate-200" id="scenario-b"><h3 class="font-bold text-brand-700">Scenario B · Getting to Know a Candidate</h3><p class="mt-2">You’re interviewing for a customer service role. Explain your routines, responsibilities, and skills you are developing.</p><ul class="list-disc pl-5 mt-3 space-y-1"><li>What do you usually do during a typical weekday?</li><li>How do you normally organize your responsibilities?</li><li>Are you currently studying or developing any skills?</li><li>What are you doing to improve your communication skills?</li></ul></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4"><h3 class="font-semibold text-brand-700 mb-2">Success challenge</h3><p>Use at least <b>two Simple Present</b> sentences, <b>two Present Progressive</b> sentences, and <b>two follow-up questions</b>. Respond naturally rather than reading a script.</p></div>
+<div class="p-4 bg-brand-50 rounded-xl border border-brand-200"><p class="font-bold text-brand-800">Practice Countdown Timer</p><p aria-live="polite" class="text-3xl font-bold my-3" id="timer-display">03:00</p><div class="flex flex-wrap gap-2"><button class="bg-brand-600 text-white px-4 py-2 rounded-lg" onclick="startTimer(180)">Start 3m</button><button class="bg-brand-600 text-white px-4 py-2 rounded-lg" onclick="startTimer(300)">Start 5m</button><button class="border border-slate-300 px-4 py-2 rounded-lg" onclick="stopTimer()">Pause</button><button class="border border-slate-300 px-4 py-2 rounded-lg" onclick="resetTimer()">Reset</button></div></div>
+<p class="text-sm text-slate-600 mt-4">Timing: 3 minutes prepare, 8 minutes role-play and role-switch, 4 minutes feedback.</p><div class="mt-8 text-right"><button class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm transition-all" onclick="switchStep(6)">Next: Reflection →</button></div></div></section>
+<!-- STEP 6: FINAL CHALLENGE & REPORT -->
+<section class="step-section" id="step-6"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><div class="mb-6"><span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Step 6 of 6</span><h2 class="text-2xl font-bold text-slate-900 mt-2">Reflection · Check Your Progress</h2><p class="text-slate-600 mt-2">Select the statements you can confidently do after today’s lesson.</p></div><div class="space-y-3"><label class="flex gap-3 items-start p-3 bg-slate-50 rounded-xl border border-slate-200"><input class="reflection-check mt-1" onchange="updateReflection()" type="checkbox"/><span>I can explain the difference between regular and temporary actions.</span></label><label class="flex gap-3 items-start p-3 bg-slate-50 rounded-xl border border-slate-200"><input class="reflection-check mt-1" onchange="updateReflection()" type="checkbox"/><span>I can form statements, negatives, and questions using both tenses.</span></label><label class="flex gap-3 items-start p-3 bg-slate-50 rounded-xl border border-slate-200"><input class="reflection-check mt-1" onchange="updateReflection()" type="checkbox"/><span>I can talk about my routines and current activities.</span></label><label class="flex gap-3 items-start p-3 bg-slate-50 rounded-xl border border-slate-200"><input class="reflection-check mt-1" onchange="updateReflection()" type="checkbox"/><span>I can ask follow-up questions and keep a conversation going.</span></label></div><p class="mt-4 font-semibold text-brand-700" id="reflection-score">0 of 4 learning goals selected</p><div class="mt-6 p-5 bg-brand-50 border border-brand-200 rounded-xl"><h3 class="text-xl font-bold text-brand-700">Lesson 1.1.4 Completed!</h3><p class="mt-2">Review any areas that still need practice, then try the role-play again with fewer notes.</p></div><div class="mt-6"><button class="text-brand-700 font-bold" onclick="switchStep(0)">Return to Overview ↺</button></div></div></section>
+</main>
+<!-- Master bottom navigation: available on every lesson screen -->
+<div aria-label="Lesson navigation" class="master-bottom-nav no-print">
+<button disabled="" id="previous-section" onclick="switchStep(currentStep-1)" type="button">← Back</button>
+<span id="bottom-section-label" style="color:#54595f;font-size:14px;font-weight:500">Overview · 1 of 7</span>
+<button id="next-section" onclick="switchStep(currentStep+1)" type="button">Next →</button>
+</div>
+<!-- FOOTER -->
+<footer class="bg-[#2a2c2e] border-t border-[#54595f] text-slate-400 text-xs py-6 text-center no-print mt-auto">
+<div class="max-w-7xl mx-auto px-4">
+<p>10 Week English Program | Lesson 1.1.4: Simple Present vs. Present Progressive (CEFR A2–B1)</p>
+<p class="text-slate-500 text-[10px] mt-1">Designed for interactive oral fluency and instructional efficiency.</p>
+</div>
+</footer>
+<!-- JAVASCRIPT LOGIC -->
+<script>const grammarQuestions = [{"answer": 1, "why": "Usually describes a routine. She takes third-person -s."}, {"answer": 1, "why": "Look! signals an action happening now."}, {"answer": 2, "why": "This week describes a temporary situation."}, {"answer": 0, "why": "Like is generally a stative verb; my brother takes doesn't."}, {"answer": 1, "why": "Use Do with you for regular habits."}, {"answer": 1, "why": "Progressive questions use am/is/are + subject + verb-ing."}, {"answer": 2, "why": "After doesn't, use the base verb."}, {"answer": 0, "why": "Use am + verb-ing for an ongoing temporary activity."}, {"answer": 0, "why": "Use Simple Present for a regular habit."}, {"answer": 1, "why": "This month indicates a temporary arrangement."}];
+let currentStep = 0;
+        function switchStep(stepIndex) {
+            if (stepIndex < 0 || stepIndex > 6) return;
+            currentStep = stepIndex;
+            const steps = document.querySelectorAll('.step-section');
+            const tabs = document.querySelectorAll('.nav-tab');
+
+            steps.forEach((step, idx) => {
+                if (idx === stepIndex) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+
+            tabs.forEach((tab, idx) => {
+                if (idx === stepIndex) {
+                    tab.classList.remove('text-slate-300', 'hover:bg-slate-700');
+                    tab.classList.add('text-white', 'bg-brand-600');
+                    tab.setAttribute('aria-current', 'step');
+                } else {
+                    tab.classList.remove('text-white', 'bg-brand-600');
+                    tab.classList.add('text-slate-300', 'hover:bg-slate-700');
+                    tab.removeAttribute('aria-current');
+                }
+            });
+
+            // Update Progress Bar
+            const progress = ((stepIndex + 1) / steps.length) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('progress-track').setAttribute('aria-valuenow', String(stepIndex+1));
+            document.getElementById('previous-section').disabled = stepIndex === 0;
+            document.getElementById('next-section').disabled = stepIndex === steps.length-1;
+            document.getElementById('next-section').textContent = stepIndex === steps.length-1 ? 'Completed ✓' : 'Next →';
+            const sectionName = tabs[stepIndex].textContent.trim();
+            document.getElementById('bottom-section-label').textContent = `${sectionName} · ${stepIndex+1} of ${steps.length}`;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+function toggleAnswer(id){document.getElementById(id).classList.toggle('hidden');}
+function checkGrammar(){
+ let correct=0,answered=0;
+ grammarQuestions.forEach((q,i)=>{
+  const picked=document.querySelector(`input[name="grammar-${i}"]:checked`);
+  const f=document.getElementById(`feedback-${i}`);
+  f.classList.remove('hidden','text-green-700','text-red-700');
+  if(!picked){f.textContent='Please choose an answer before checking.';f.classList.add('text-red-700');return;}
+  answered++;
+  const good=Number(picked.value)===q.answer;
+  if(good)correct++;
+  f.textContent=(good?'✓ Correct. ':'✗ Not quite. ')+q.why;
+  f.classList.add(good?'text-green-700':'text-red-700');
+ });
+ document.getElementById('grammar-score').textContent=`Score: ${correct}/10 correct (${answered}/10 answered).`;
+}
+function resetGrammar(){
+ document.querySelectorAll('input[name^="grammar-"]').forEach(el=>el.checked=false);
+ grammarQuestions.forEach((_,i)=>{const f=document.getElementById(`feedback-${i}`);f.textContent='';f.classList.add('hidden');});
+ document.getElementById('grammar-score').textContent='';
+}
+function chooseScenario(which){
+ ['a','b'].forEach(id=>{
+  document.getElementById('scenario-'+id).classList.toggle('hidden',id!==which);
+  const btn=document.getElementById('scenario-'+id+'-btn');
+  btn.classList.toggle('bg-brand-600',id===which);
+  btn.classList.toggle('text-white',id===which);
+  btn.classList.toggle('bg-slate-100',id!==which);
+  btn.classList.toggle('text-slate-800',id!==which);
+ });
+}
+let timerInterval=null,timerRemaining=180;
+function renderTimer(){const m=Math.floor(timerRemaining/60),s=timerRemaining%60;document.getElementById('timer-display').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
+function stopTimer(){if(timerInterval!==null){clearInterval(timerInterval);timerInterval=null;}}
+function startTimer(seconds){stopTimer();timerRemaining=seconds;renderTimer();timerInterval=setInterval(()=>{timerRemaining=Math.max(0,timerRemaining-1);renderTimer();if(timerRemaining===0)stopTimer();},1000);}
+function resetTimer(){stopTimer();timerRemaining=180;renderTimer();}
+function updateReflection(){const boxes=[...document.querySelectorAll('.reflection-check')];document.getElementById('reflection-score').textContent=`${boxes.filter(x=>x.checked).length} of ${boxes.length} learning goals selected`;}
+</script>
+</body>
+</html>
